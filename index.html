@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Easey — Websites, made easy</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="logo">
+  <img src="assets/logo.png" alt="Web Easey Logo">
+  <span>Web Easey</span>
+</div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#niches">Niches</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <h1>Websites, made easy.</h1>
+      <p>
+        We help businesses build clean, fast, and professional websites  
+        without confusion, delays, or technical mess.  
+        Simple design. Real results.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#niches" class="btn primary">View Live Demos</a>
+        <a href="#contact" class="btn secondary">Get Your Website</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHAT WE DO ================= -->
+  <section class="section">
+    <div class="container">
+      <h2>What We Provide</h2>
+      <p>
+        At Web Easey, we build <strong>clean, chaos-free websites</strong> that are easy to use,
+        easy to manage, and built to perform across all devices.
+      </p>
+      <p>
+        From planning and design to deployment and hosting, we take care of the entire
+        process end-to-end — so our clients never have to deal with technical confusion or delays.
+      </p>
+      <p class="muted">
+        No clutter. No confusion. Just websites that work.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT US ================= -->
+  <section class="section light">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>
+        Over the past <strong>1 year</strong>, we’ve helped businesses and creators
+        build fast, clean, and easy-to-manage websites.
+      </p>
+      <p>
+        At Web Easey, we believe a good website should feel effortless —
+        both for the business owner and for their customers.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= NICHES ================= -->
+  <section class="section" id="niches">
+    <div class="container">
+      <h2>Our Most Popular Website Niches</h2>
+
+      <div class="niche-grid">
+        <div class="niche-card">
+          <h3>🎓 Coaching Classes</h3>
+          <button class="btn primary" onclick="openDemo('coaching')">
+            Preview Themes
+          </button>
+        </div>
+
+        <div class="niche-card">
+          <h3>🏋️ Gym & Fitness</h3>
+          <button class="btn primary" onclick="openDemo('gym')">
+            Preview Themes
+          </button>
+        </div>
+
+        <div class="niche-card">
+          <h3>💄 Beauty & Salon</h3>
+          <button class="btn primary" onclick="openDemo('beauty')">
+            Preview Themes
+          </button>
+        </div>
+
+        <div class="niche-card">
+          <h3>🛒 E-Commerce</h3>
+          <button class="btn primary" onclick="openDemo('ecommerce')">
+            Preview Themes
+          </button>
+        </div>
+      </div>
+
+      <p class="muted center">
+        Each niche comes with multiple color themes that you can preview and switch with one click.
+      </p>
+
+      <p class="muted center">
+        We also build websites for other niches — personal brands, portfolios,
+        local businesses, and startups.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="section light">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq">
+        <div class="faq-item">
+          <h4>What do I get in the ₹2999 plan?</h4>
+          <p>A fully working, mobile-friendly website hosted with a free domain.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Can I change colors or design later?</h4>
+          <p>Yes. You can choose from multiple color themes and request small changes.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>How long does it take to deliver?</h4>
+          <p>Usually 2–4 days, depending on content and requirements.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Is this a one-time payment?</h4>
+          <p>Yes. ₹2999 is a one-time cost with no monthly website charges.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRICING ================= -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <h2>Pricing</h2>
+
+      <div class="pricing-card">
+        <h3>Starter Website</h3>
+        <p class="price">₹2999</p>
+        <ul>
+    <li>1 fully working website</li>
+    <li>Clean & responsive design</li>
+    <li>Free hosting included</li>
+    <li>Free domain included</li>
+    <li>Fast loading</li>
+    </ul>
+
+        <p class="muted">
+          Price may increase based on additional pages or custom requirements.
+        </p>
+
+        <a href="#contact" class="btn primary">Contact Us to Get Started</a>
+      </div>
+    </div>
+  </section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section light" id="contact">
+  <div class="container center">
+
+    <h2>Let’s Build Your Website</h2>
+
+    <p class="contact-subtext">
+      Looking for a clean, fast and professional website for your business?
+      <br />
+      Get in touch and let’s make it happen.
+    </p>
+
+    <div class="contact-buttons">
+      <button class="btn primary" onclick="openWhatsApp()">
+        💬 Chat on WhatsApp
+      </button>
+
+      <a class="btn secondary" href="tel:+917757081507">
+        📞 Call Now
+      </a>
+    </div>
+
+    <p class="contact-note">
+      Available for calls & WhatsApp
+    </p>
+
+  </div>
+</section>
+
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+  <div class="footer-links">
+    <a href="pages/privacy.html">Privacy Policy</a>
+    <a href="pages/terms.html">Terms & Conditions</a>
+  </div>
+  <p>© 2026 Web Easey — Websites, made easy.</p>
+</footer>
+
+  <!-- JS -->
+<script src="js/main.js"></script>
+<script src="js/demo-links.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
