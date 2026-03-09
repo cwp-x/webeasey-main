@@ -2,7 +2,7 @@
    DEMO LINKS CONFIG
 ========================= */
 
-const DEMO_BASE_URL = "https://webeasey-demos.netlify.app";
+const DEMO_BASE_URL = "https://cwp-x.github.io/webeasey-demos";
 
 /*
   Structure:
