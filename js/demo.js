@@ -112,11 +112,11 @@ lavender:`${DEMO_BASE_URL}?niche=beauty&theme=lavender`,
 minimal:`${DEMO_BASE_URL}?niche=beauty&theme=minimal`
 },
 
-ecommerce:{
-blue:`${DEMO_BASE_URL}?niche=ecommerce&theme=blue`,
-orange:`${DEMO_BASE_URL}?niche=ecommerce&theme=orange`,
-black:`${DEMO_BASE_URL}?niche=ecommerce&theme=black`,
-brand:`${DEMO_BASE_URL}?niche=ecommerce&theme=brand`
+realestate:{
+blue:`${DEMO_BASE_URL}?niche=realestate&theme=blue`,
+orange:`${DEMO_BASE_URL}?niche=realestate&theme=orange`,
+black:`${DEMO_BASE_URL}?niche=realestate&theme=black`,
+brand:`${DEMO_BASE_URL}?niche=realestate&theme=brand`
 }
 
 };
@@ -129,7 +129,6 @@ OPEN THEME MODAL
 ========================= */
 
 function openDemo(niche){
-<<<<<<< HEAD
 
 selectedNiche = niche;
 
@@ -181,56 +180,3 @@ function closeThemeModal(){
 document.getElementById("themeModal").style.display="none";
 
 }
-=======
-
-selectedNiche = niche;
-
-const modal = document.getElementById("themeModal");
-const grid = document.getElementById("themeGrid");
-
-grid.innerHTML="";
-
-const themes = Object.keys(demoLinks[niche]);
-
-themes.forEach(theme=>{
-
-const card = document.createElement("div");
-
-card.className="theme-card";
-
-card.innerText = theme.charAt(0).toUpperCase()+theme.slice(1);
-
-card.onclick = () => openDemoTheme(niche,theme);
-
-grid.appendChild(card);
-
-});
-
-modal.style.display="flex";
-
-}
-
-
-/* =========================
-OPEN DEMO
-========================= */
-
-function openDemoTheme(niche,theme){
-
-if(!demoLinks[niche] || !demoLinks[niche][theme]) return;
-
-window.open(demoLinks[niche][theme],"_blank");
-
-}
-
-
-/* =========================
-CLOSE MODAL
-========================= */
-
-function closeThemeModal(){
-
-document.getElementById("themeModal").style.display="none";
-
-}
->>>>>>> c266043a785c76f9228d3f9ab0c83aaa90f30852
