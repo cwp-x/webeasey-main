@@ -702,3 +702,58 @@ strong {
 .nav-links a:hover::after{
   width:calc(100% - 28px);
 }
+
+
+/* =============================================
+   MOBILE HORIZONTAL SCROLL FIX
+   Add this to the bottom of main.css
+   ============================================= */
+
+/* Root fix — prevent ANY element from causing overflow */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Hero grid bg can bleed outside — clip it */
+.hero {
+  overflow: hidden;
+}
+
+/* Contact section glow blob is 700px wide — clips on mobile */
+.contact-section {
+  overflow: hidden;
+}
+
+/* Stat cards hover shifts them right — can cause overflow on small screens */
+@media (max-width: 768px) {
+  .stat-card:hover {
+    transform: translateY(-3px); /* override the translateX */
+  }
+
+  .faq-item:hover {
+    transform: none;
+  }
+
+  /* Niche grid shouldn't overflow its container */
+  .niche-grid {
+    width: 100%;
+  }
+
+  /* Pricing card padding can overflow on tiny screens */
+  .pricing-card {
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  /* Footer links row can overflow if items are wide */
+  .footer-inner {
+    width: 100%;
+  }
+}
+
+/* Theme modal background blur can sometimes trigger scroll */
+.theme-modal {
+  overflow: hidden;
+}
+
