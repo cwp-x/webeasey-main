@@ -15,16 +15,29 @@
   <header class="navbar">
     <div class="container nav-inner">
       <div class="logo">
-  <img src="assets/logo.png" alt="Web Easey Logo">
-  <span>Web Easey</span>
-</div>
+        <img src="assets/logo.png" alt="Web Easey Logo">
+        <span>Web Easey</span>
+      </div>
       <nav class="nav-links">
         <a href="#home">Home</a>
         <a href="#niches">Niches</a>
         <a href="#pricing">Pricing</a>
         <a href="#contact">Contact</a>
       </nav>
+      <!-- Hamburger (mobile only) -->
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
+    <!-- Mobile Drawer -->
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="#home" onclick="closeMobileMenu()">Home</a>
+      <a href="#niches" onclick="closeMobileMenu()">Niches</a>
+      <a href="#pricing" onclick="closeMobileMenu()">Pricing</a>
+      <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+    </nav>
   </header>
 
   <!-- ================= HERO ================= -->
@@ -67,7 +80,7 @@
     <div class="container">
       <h2>About Us</h2>
       <p>
-        Over the past <strong>3 years</strong>, we’ve helped businesses and creators
+        Over the past <strong>3 years</strong>, we've helped businesses and creators
         build fast, clean, and easy-to-manage websites.
       </p>
       <p>
@@ -105,11 +118,11 @@
         </div>
 
         <div class="niche-card">
-  <h3>🏠 Real Estate</h3>
-  <button class="btn primary" onclick="openDemo('realestate')">
-    Preview Themes
-  </button>
-</div>
+          <h3>🏠 Real Estate</h3>
+          <button class="btn primary" onclick="openDemo('realestate')">
+            Preview Themes
+          </button>
+        </div>
       </div>
 
       <p class="muted center">
@@ -154,7 +167,7 @@
         </div>
         <div class="faq-item">
           <h4>What's the charge for an additional revision?</h4>
-          <p>Additional 2 revisions will be just be  at ₹999/-</p>
+          <p>Additional 2 revisions will be just be at ₹999/-</p>
         </div>
         <div class="faq-item">
           <h4>Do I need technical knowledge?</h4>
@@ -164,7 +177,6 @@
           <h4>How can I get discount On This?</h4>
           <p>Just hit the chat on whatsapp button to get discounted rates.</p>
         </div>
-        
       </div>
     </div>
   </section>
@@ -178,12 +190,12 @@
         <h3>Starter Website</h3>
         <p class="price">₹4999/-</p>
         <ul>
-    <li>1 fully working website</li>
-    <li>Clean & responsive design</li>
-    <li>Free hosting included</li>
-    <li>Free subdomain included</li>
-    <li>Fast loading</li>
-    </ul>
+          <li>1 fully working website</li>
+          <li>Clean & responsive design</li>
+          <li>Free hosting included</li>
+          <li>Free subdomain included</li>
+          <li>Fast loading</li>
+        </ul>
 
         <p class="muted">
           Price may increase based on additional pages or custom requirements.
@@ -194,74 +206,73 @@
     </div>
   </section>
 
-<!-- ================= CONTACT ================= -->
-<section class="section light" id="contact">
-  <div class="container center">
+  <!-- ================= CONTACT ================= -->
+  <section class="section light" id="contact">
+    <div class="container center">
 
-    <h2>Let’s Build Your Website</h2>
+      <h2>Let's Build Your Website</h2>
 
-    <p class="contact-subtext">
-      Looking for a clean, fast and professional website for your business?
-      <br />
-      Get in touch and let’s make it happen.
-    </p>
+      <p class="contact-subtext">
+        Looking for a clean, fast and professional website for your business?
+        <br />
+        Get in touch and let's make it happen.
+      </p>
 
-    <div class="contact-buttons">
-      <button class="btn primary" onclick="openWhatsApp()">
-        💬 Chat on WhatsApp
-      </button>
+      <div class="contact-buttons">
+        <button class="btn primary" onclick="openWhatsApp()">
+          💬 Chat on WhatsApp
+        </button>
 
-      <a class="btn secondary" href="tel:+917757081507">
-        📞 Call Now
-      </a>
+        <a class="btn secondary" href="tel:+917757081507">
+          📞 Call Now
+        </a>
+      </div>
+
+      <p class="contact-note">
+        Available for calls & WhatsApp
+      </p>
+
     </div>
+  </section>
 
-    <p class="contact-note">
-      Available for calls & WhatsApp
-    </p>
-
+  <!-- ================= THEME SELECTOR MODAL ================= -->
+  <div id="themeModal" class="theme-modal">
+    <div class="theme-box">
+      <h3 id="themeTitle">Select Theme</h3>
+      <div id="themeGrid" class="theme-grid"></div>
+      <button onclick="closeThemeModal()" class="btn secondary">
+        Close
+      </button>
+    </div>
   </div>
-</section>
-
-<!-- ================= THEME SELECTOR MODAL ================= -->
-
-<div id="themeModal" class="theme-modal">
-
-  <div class="theme-box">
-
-    <h3 id="themeTitle">Select Theme</h3>
-
-    <div id="themeGrid" class="theme-grid"></div>
-
-    <button onclick="closeThemeModal()" class="btn secondary">
-      Close
-    </button>
-
-  </div>
-
-</div>
 
   <!-- ================= FOOTER ================= -->
   <footer class="footer">
-  <div class="footer-links">
-    <a href="pages/privacy.html">Privacy Policy</a>
-    <a href="pages/terms.html">Terms & Conditions</a>
-  </div>
-  <p>© 2026 Web Easey — Websites, made easy.</p>
-</footer>
+    <div class="footer-links">
+      <a href="pages/privacy.html">Privacy Policy</a>
+      <a href="pages/terms.html">Terms & Conditions</a>
+    </div>
+    <p>© 2026 Web Easey — Websites, made easy.</p>
+  </footer>
 
   <!-- JS -->
-<script src="js/main.js"></script>
-<script src="js/demo.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/demo.js"></script>
+
+  <!-- Hamburger toggle script -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+
+    function closeMobileMenu() {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    }
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
