@@ -35,6 +35,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  max-width: 100%;
 }
 
 body {
@@ -44,6 +45,7 @@ body {
   color: var(--text-main);
   background: var(--bg-white);
   overflow-x: hidden;
+  max-width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -161,11 +163,9 @@ strong {
   position: sticky;
   top: 0;
   z-index: 1000;
-
   background: rgba(8, 8, 14, 0.75);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
@@ -196,54 +196,48 @@ strong {
   font-weight: 800;
   color: var(--primary);
   letter-spacing: -0.03em;
-}
-.logo span{
   transition: var(--transition);
 }
 
-.logo:hover span{
+.logo:hover span {
   color: #818cf8;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 20px;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: var(--text-muted);
-  padding: 8px 16px;
+  color: #94a3b8;
+  font-size: 0.95rem;
   font-weight: 500;
-  font-size: 0.94rem;
+  padding: 8px 14px;
   border-radius: 8px;
-  transition: var(--transition);
+  transition: all .25s ease;
   position: relative;
 }
 
-/* hover */
-
 .nav-links a:hover {
-  color: #fff;
+  color: white;
   background: rgba(255,255,255,0.05);
 }
-
-/* underline animation */
 
 .nav-links a::after {
   content: "";
   position: absolute;
-  left: 16px;
+  left: 14px;
   bottom: -4px;
   width: 0%;
   height: 2px;
   background: var(--primary);
-  transition: 0.25s;
+  transition: .25s;
 }
 
 .nav-links a:hover::after {
-  width: calc(100% - 32px);
+  width: calc(100% - 28px);
 }
 
 .nav-cta {
@@ -523,6 +517,7 @@ strong {
   margin-bottom: 40px;
   flex-wrap: wrap;
   gap: 24px;
+  width: 100%;
 }
 
 .footer-logo span {
@@ -566,8 +561,6 @@ strong {
   padding-top: 24px;
   border-top: 1px solid var(--border);
 }
-
-
 
 /* ==========================================================================
    RESPONSIVE
@@ -643,6 +636,19 @@ strong {
     width: 100%;
     max-width: 320px;
   }
+
+  .stat-card:hover {
+    transform: translateY(-3px);
+  }
+
+  .niche-grid {
+    width: 100%;
+  }
+
+  .pricing-card {
+    box-sizing: border-box;
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -658,6 +664,7 @@ strong {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 100%;
   }
 
   .footer-links {
@@ -665,95 +672,3 @@ strong {
     gap: 12px;
   }
 }
-
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:20px;
-}
-
-.nav-links a{
-  text-decoration:none;
-  color:#94a3b8;
-  font-size:0.95rem;
-  font-weight:500;
-  padding:8px 14px;
-  border-radius:8px;
-  transition:all .25s ease;
-  position:relative;
-}
-
-.nav-links a:hover{
-  color:white;
-  background:rgba(255,255,255,0.05);
-}
-
-.nav-links a::after{
-  content:"";
-  position:absolute;
-  left:14px;
-  bottom:-4px;
-  width:0%;
-  height:2px;
-  background:var(--primary);
-  transition:.25s;
-}
-
-.nav-links a:hover::after{
-  width:calc(100% - 28px);
-}
-
-
-/* =============================================
-   MOBILE HORIZONTAL SCROLL FIX
-   Add this to the bottom of main.css
-   ============================================= */
-
-/* Root fix — prevent ANY element from causing overflow */
-html, body {
-  overflow-x: hidden;
-  max-width: 100%;
-}
-
-/* Hero grid bg can bleed outside — clip it */
-.hero {
-  overflow: hidden;
-}
-
-/* Contact section glow blob is 700px wide — clips on mobile */
-.contact-section {
-  overflow: hidden;
-}
-
-/* Stat cards hover shifts them right — can cause overflow on small screens */
-@media (max-width: 768px) {
-  .stat-card:hover {
-    transform: translateY(-3px); /* override the translateX */
-  }
-
-  .faq-item:hover {
-    transform: none;
-  }
-
-  /* Niche grid shouldn't overflow its container */
-  .niche-grid {
-    width: 100%;
-  }
-
-  /* Pricing card padding can overflow on tiny screens */
-  .pricing-card {
-    box-sizing: border-box;
-    width: 100%;
-  }
-
-  /* Footer links row can overflow if items are wide */
-  .footer-inner {
-    width: 100%;
-  }
-}
-
-/* Theme modal background blur can sometimes trigger scroll */
-.theme-modal {
-  overflow: hidden;
-}
-
