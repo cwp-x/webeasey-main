@@ -83,7 +83,7 @@
    DEMO LINKS CONFIG
 ========================= */
 
-const DEMO_BASE_URL = "https://cwp-x.github.io/webeasey-demos/";
+const DEMO_BASE_URL = "https://cwp-x.github.io/webeasey-demos/index.html";
 
 /*
 demoLinks[niche][theme]
