@@ -166,7 +166,7 @@ function openDemoTheme(niche,theme){
 
 if(!demoLinks[niche] || !demoLinks[niche][theme]) return;
 
-window.open(demoLinks[niche][theme],"_blank");
+window.location.href = demoLinks[niche][theme];
 
 }
 
